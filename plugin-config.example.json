@@ -1,0 +1,7 @@
+{
+  "_comment": "可选：覆盖数据目录与 Python 路径。复制为插件目录下的 plugin-config.json 后按需填写；留空则自动探测。",
+  "_comment_dataRoot": "留空 = 插件目录的同级 小说工坊/。按包安装时（落在 node_modules 里）务必显式指定，否则卸载会丢数据。",
+  "_comment_python": "留空 = 依次尝试 NOVEL_FORGE_PYTHON 环境变量 → 本文件 python 字段 → ~/.dsh/dsh-runtimes/*/dependencies/python/python.exe → ~/AppData/Local/Programs/Python/Python312/python.exe → PATH 里的 python.exe。",
+  "dataRoot": "",
+  "python": ""
+}

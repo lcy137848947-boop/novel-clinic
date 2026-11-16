@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "name": "干句",
+  "created_at": "2026-11-16T18:00:23+08:00",
+  "samples": [
+    {
+      "file": "samples/干句_1.md",
+      "name": "干句_1.md",
+      "chars": 75,
+      "paragraphs": 1,
+      "sha1": "70ff7502857a"
+    },
+    {
+      "file": "samples/干句_2.md",
+      "name": "干句_2.md",
+      "chars": 80,
+      "paragraphs": 1,
+      "sha1": "c42ed6ef9f82"
+    },
+    {
+      "file": "samples/干句_3.md",
+      "name": "干句_3.md",
+      "chars": 73,
+      "paragraphs": 1,
+      "sha1": "ddd2056dfc25"
+    }
+  ],
+  "features": {
+    "sent_mean": {
+      "mean": 4.6933,
+      "std": 0.3459
+    },
+    "sent_std": {
+      "mean": 1.8,
+      "std": 0.3699
+    },
+    "short_ratio": {
+      "mean": 0.9333,
+      "std": 0.0543
+    },
+    "para_mean": {
+      "mean": 76,
+      "std": 2.9439
+    },
+    "dialogue_ratio": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "image_per_k": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "color_per_k": {
+      "mean": 22.0663,
+      "std": 12.6905
+    },
+    "sense_per_k": {
+      "mean": 30.799,
+      "std": 6.5793
+    },
+    "nature_per_k": {
+      "mean": 26.3547,
+      "std": 1.0032
+    },
+    "abstract_per_k": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "judgment_per_k": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "adverb_per_k": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "classical_per_k": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "dash_per_k": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "ellipsis_per_k": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "question_ratio": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "exclaim_ratio": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "comma_per_sent": {
+      "mean": 0.17,
+      "std": 0.0424
+    }
+  },
+  "features_order": [
+    "sent_mean",
+    "sent_std",
+    "short_ratio",
+    "para_mean",
+    "dialogue_ratio",
+    "image_per_k",
+    "color_per_k",
+    "sense_per_k",
+    "nature_per_k",
+    "abstract_per_k",
+    "judgment_per_k",
+    "adverb_per_k",
+    "classical_per_k",
+    "dash_per_k",
+    "ellipsis_per_k",
+    "question_ratio",
+    "exclaim_ratio",
+    "comma_per_sent"
+  ],
+  "labels": {
+    "sent_mean": "平均句长",
+    "sent_std": "句长波动",
+    "short_ratio": "短句占比",
+    "para_mean": "平均段长",
+    "dialogue_ratio": "对白占比",
+    "image_per_k": "比喻/像密度",
+    "color_per_k": "颜色词密度",
+    "sense_per_k": "感官词密度",
+    "nature_per_k": "自然意象密度",
+    "abstract_per_k": "抽象词密度",
+    "judgment_per_k": "判断句密度",
+    "adverb_per_k": "程度副词密度",
+    "classical_per_k": "古风虚词密度",
+    "dash_per_k": "破折号密度",
+    "ellipsis_per_k": "省略号密度",
+    "question_ratio": "疑问句占比",
+    "exclaim_ratio": "感叹句占比",
+    "comma_per_sent": "逗号/句"
+  },
+  "paragraphs_learned": 3,
+  "sample_consistency": 89.3,
+  "notes": [
+    "样本偏短（最长 80 字）；当前可做演示，正式使用建议每段 300–800 字。"
+  ]
+}

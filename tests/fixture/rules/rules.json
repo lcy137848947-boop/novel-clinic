@@ -1,0 +1,69 @@
+{
+  "chapter_pattern": "^第(\\d+)章",
+  "voice": {},
+  "banned_terms": [
+    { "term": "旧灯", "replacement": "引路灯", "reason": "本书统一写法是「引路灯」；「旧灯」是港务局的旧称" }
+  ],
+  "allow_duplicates": [],
+  "allow_patterns": [],
+  "watch_terms": ["白塔"],
+  "facts": [
+    {
+      "id": "fact.ajia_keeper",
+      "name": "阿岬的看守身份不能点破",
+      "severity": "hard",
+      "scope": "any",
+      "patterns": [
+        "阿岬(?:其实就是|就是|其实是)[^。！？\\n]{0,10}看守",
+        "阿岬[^。！？\\n]{0,12}是白塔的看守"
+      ],
+      "why": "阿岬的身份是全书伏笔，正文只许暗示（例如他熟悉塔内结构），不能直接点破。",
+      "suggestion": "删掉身份判断，改成阿岬的一个动作或一句无关的话。"
+    },
+    {
+      "id": "fact.lamp_explained",
+      "name": "灯灭之后少船的原因不能说破",
+      "severity": "hard",
+      "scope": "any",
+      "patterns": [
+        "灯[^。！？\\n]{0,8}灭[^。！？\\n]{0,16}(?:因为|原因|所以)[^。！？\\n]{0,12}船"
+      ],
+      "why": "灭灯与沉船的关系是全书核心悬念，正文不能给出因果解释。",
+      "suggestion": "只写现象：灯灭了，港里少了一条船。不要写为什么。",
+      "exclude": []
+    }
+  ],
+  "ai_patterns": [
+    {
+      "id": "ai.explain_rule",
+      "name": "替读者总结规矩",
+      "severity": "warn",
+      "scope": "any",
+      "patterns": [
+        "这就是[^。！？\\n]{0,12}规矩",
+        "这[^。！？\\n]{0,6}(?:就是|才是)[^。！？\\n]{0,10}规矩"
+      ],
+      "why": "把规矩总结给读者听，是典型的替代读者下结论。",
+      "suggestion": "删掉总结句，让规矩从人物的动作里露出来。"
+    }
+  ],
+  "do_not_touch": [
+    "敲船板的节奏（敲一下、停一下）：作者语感，不动",
+    "老周的口头禅「我只管船底漏不漏」：人物语气，不动"
+  ],
+  "thresholds": {
+    "near_duplicate_ratio": 0.9,
+    "near_duplicate_min_len": 18,
+    "near_duplicate_window": 100,
+    "repeated_opening_run": 3,
+    "repeated_opening_chars": 2,
+    "watch_term_chapter_min": 4,
+    "hook_weak_below": 45,
+    "chapter_outlier_z": 1.8,
+    "max_findings_per_chapter": 40,
+    "voice_tolerance_pct": 10
+  },
+  "notes": [
+    "这是自测用 fixture，不是真实书稿；规则写得刻意，用来触发各类扫描结果。"
+  ]
+}

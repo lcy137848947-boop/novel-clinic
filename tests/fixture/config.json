@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "title": "守灯人",
+  "subtitle": "测试用虚构短篇",
+  "main_draft": "input/守灯人.md",
+  "current_round": 0,
+  "chapter_pattern": "^第(\\d+)章",
+  "rules_file": "rules/rules.json",
+  "docx_title": "守灯人",
+  "docx_subtitle": "测试用虚构短篇",
+  "source": "novel-clinic 自测 fixture（虚构，可自由修改）",
+  "created_at": "2026-11-16T00:00:00+08:00"
+}

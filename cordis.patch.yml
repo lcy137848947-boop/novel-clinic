@@ -1,0 +1,3 @@
+- insert:
+    - id: novel-forge
+      name: '@local/dsh-novel-forge'

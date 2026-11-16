@@ -1,0 +1,43 @@
+name: Rules pack
+description: 提交一套题材规则（禁用词 / 设定事实 / AI 腔模式）
+labels: [rules-pack]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        规则包是"给某一类书用的规则集"，不是代码。先看 [docs/rules-authoring.md](../docs/rules-authoring.md)。
+  - type: input
+    id: name
+    attributes:
+      label: 包名
+      placeholder: 例：网文通用 / 古言 / 科幻
+    validations:
+      required: true
+  - type: input
+    id: applies
+    attributes:
+      label: 适用题材
+      placeholder: 例：都市异能、悬疑、言情
+    validations:
+      required: true
+  - type: textarea
+    id: rules
+    attributes:
+      label: 规则内容
+      description: 贴 rules.json / rules 目录结构；每条规则要有 id、why、suggestion
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 误报情况
+      description: 在什么文本上会误报？怎么用 allow / do_not_touch 处理？
+    validations:
+      required: false
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: 版权
+      options:
+        - label: 这套规则是我原创或有权分发，不含他人作品原文
+          required: true

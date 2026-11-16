@@ -1,0 +1,41 @@
+{
+  "name": "@local/dsh-novel-forge",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Novel Clinic：面向中文小说的编辑体检工作台（DSH 插件）。只读扫描、可复查改动清单、门禁体检，永不覆盖主稿。",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "plugin-config.example.json",
+    "locale/*.json",
+    "icon.svg",
+    "engine/run.py",
+    "engine/novel_engine/*.py",
+    "tests/selftest_engine.py",
+    "tests/fixture/**"
+  ],
+  "scripts": {
+    "test": "python tests/selftest_engine.py"
+  },
+  "keywords": ["dsh", "dsh-plugin", "novel", "chinese", "editing", "linter", "docx"],
+  "dsh": {
+    "engines": { "dsh": ">=0.2.1-rc.2" },
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-layout"]
+    }
+  }
+}

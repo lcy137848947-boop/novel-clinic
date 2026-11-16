@@ -1,0 +1,18 @@
+# 修复轮次的备份（.bak-20261026 / .bak3-20261026 …）
+*.bak*
+# Python 字节码
+__pycache__/
+*.pyc
+# 自测运行时目录
+tests/_run/
+_selftest_engine_run/
+# 本机覆盖配置（可能含绝对路径）
+plugin-config.json
+# 本地环境
+.venv/
+venv/
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

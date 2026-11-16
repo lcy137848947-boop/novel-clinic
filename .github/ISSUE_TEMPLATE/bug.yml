@@ -1,0 +1,68 @@
+name: Bug report
+description: 扫描/应用/门禁/面板哪里不对
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        先跑一遍 `python tests/selftest_engine.py`，如果它也失败，说明是引擎问题；如果它通过，更可能是数据/规则/面板问题。
+  - type: input
+    id: version
+    attributes:
+      label: 版本 / 提交
+      description: 插件版本（package.json）或 commit hash
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 出问题的区域
+      options:
+        - 扫描 / 报告
+        - 审批 / 应用
+        - 门禁体检
+        - 改写契约
+        - 知识库
+        - 情节
+        - 文风
+        - 面板 UI
+        - 安装 / 启动
+        - 其它
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 发生了什么
+      description: 期望什么、实际什么；能贴 `扫描.json` / `体检.json` 的相关片段最好
+      placeholder: |
+        期望：
+        实际：
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: 环境
+      description: 系统、Python 版本、DSH 版本；主稿格式（docx/md/txt）与章节数
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 已确认不是自己的书稿内容问题（或已脱敏）
+          required: true
+        - label: 已跑过 selftest
+          required: false
