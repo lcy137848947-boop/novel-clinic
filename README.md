@@ -3,7 +3,6 @@
 > 面向中文小说的**编辑体检工作台**，跑在 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）里。
 > A review-first workbench for Chinese web novels: scan → score → approve → apply → gate. It never overwrites your manuscript.
 
-[![selftest](https://github.com/lcy137848947-boop/novel-clinic/actions/workflows/selftest.yml/badge.svg)](https://github.com/lcy137848947-boop/novel-clinic/actions/workflows/selftest.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ---
